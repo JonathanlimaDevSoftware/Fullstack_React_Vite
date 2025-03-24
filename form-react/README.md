@@ -45,9 +45,9 @@ Preencha os campos do formulário e clique no botão de envio. Caso algum campo 
 
 ## Exemplo de Código
 
-```tsx
+
 ![Screenshot do Projeto](./src/assets/Screenshot_form.png)
-```
+
 
 ## Contribuição
 
