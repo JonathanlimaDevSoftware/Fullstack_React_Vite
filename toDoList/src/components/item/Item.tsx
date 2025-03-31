@@ -1,13 +1,18 @@
 import * as C  from './styled'
 
 
-const Item: React.FC = () =>{
+type Tprops = {
+    title:string
+    description: string
+}
+
+const Item: React.FC<Tprops> = ( {title, description} ) =>{
     return(
        
         <C.Container>
-            <h2 className='item__title'>Title sit amet consectetur adipisicing</h2>
+            <h2 className='item__title'>{title}</h2>
             <p className='item__description'>
-            description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, repellat amet. Ipsum porro commodi odit facilis nobis suscipit possimus at dolor vitae. Eius aliquid accusamus, cum blanditiis odio cumque rem.
+                {description}
             </p>
 
             <button className='btn btn__edit' type="button">Edit</button>

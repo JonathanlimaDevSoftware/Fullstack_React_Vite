@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as C from "./styled";
+import { PainelItems } from "../painelItems/styled";
+import Item from "../item/Item";
 
 const Painel: React.FC = () => {
     type Iitem = {
@@ -11,29 +13,26 @@ const Painel: React.FC = () => {
 
     const [list, setList] = useState<Iitem[]>([]);
     const [count, setCount] = useState(1); // Armazena o ID único para os itens
+    const [savedTasks, setSavedTasks] = useState<Iitem[]>([]); // Lista salva no localStorage
 
     const inputTitle = useRef<HTMLInputElement | null>(null);
     const inputArea = useRef<HTMLTextAreaElement | null>(null);
 
-    
+
+
     // salvar no localstorage
-    
     function saveToLocalStorage(data: any[], database: string = "toDoList") {
-        const jsonData = JSON.stringify(data);
+        
+        const old_List = getFromLocalStorage()
+        const jsonData = JSON.stringify([...old_List,...data]);
         localStorage.setItem(database, jsonData);
     }
-    
     function getFromLocalStorage(database: string = "toDoList"): any[] {
         const storedData = localStorage.getItem(database);
         return storedData ? JSON.parse(storedData) : [];
     }
-    
-    
-    
-    
 
-    
-    
+    // montar objeto , item para lista
     function handleCreateList() {
         if (!inputTitle.current?.value || !inputArea.current?.value){
             return
@@ -54,50 +53,48 @@ const Painel: React.FC = () => {
         };
         
     }
+
     
-    
-    
-    
-    
-    
-    
-    
-    // Monitorando mudanças na lista
+
+
+
+    // Atualizar lista salva sempre que `list` mudar
     useEffect(() => {
         if (list.length > 0) {
-            console.log("Lista atualizada:", list);
-            
             saveToLocalStorage(list)
+            setSavedTasks(getFromLocalStorage())
         }
-        
-        
-        
-        
-        const task: any[] = getFromLocalStorage()
-        console.log(task)
+    }, [list]);
 
 
-
-
-
-
-
-
-    }, [list]); // Sempre que `list` mudar, o console.log será chamado
-
-
-
+    // Buscar tarefas salvas no localStorage na primeira renderização
+    useEffect(() => {
+        setSavedTasks(getFromLocalStorage())
+    }, []);
 
 
     return (
-        <C.Container>
+        <section>
+            <C.Container>
             <h1>To do List</h1>
             <input ref={inputTitle} type="text" placeholder="Title task" />
             <textarea ref={inputArea} placeholder="Description task"></textarea>
             <button className="btn btn__add" onClick={handleCreateList} type="button">
                 Add
             </button>
-        </C.Container>
+            </C.Container>
+
+            <PainelItems>
+                {savedTasks.length > 0 &&
+                    savedTasks.map((item, index) => (
+                        <ul key={index}>
+                            <Item title={item.title} description={item.description} />
+                        </ul>
+                ))}
+
+            </PainelItems>
+
+        </section>
     );
 };
 

@@ -1,12 +1,16 @@
 import React from "react";
-import * as C from './styled'
-import Item from "../item/Item";
-const PainelItems:React.FC = ()=>{
-    return(
-        <C.PainelItems>
-            <Item/>
-        </C.PainelItems>
-    )
+import * as C from './styled';
+
+interface PainelItemsProps {
+    children: React.ReactNode;
 }
 
-export default PainelItems
+const PainelItems: React.FC<PainelItemsProps> = ({ children }) => {
+    return (
+        <C.PainelItems>
+            {children} {/* Renderiza os elementos filhos passados */}
+        </C.PainelItems>
+    );
+};
+
+export default PainelItems;
