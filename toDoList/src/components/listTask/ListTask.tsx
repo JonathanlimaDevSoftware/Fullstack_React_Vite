@@ -1,5 +1,8 @@
-import React, { useRef, useState } from 'react'
+
+import { useState } from 'react';
+import Search from '../search/Search';
 import * as C from './listTask'
+import Filter from '../filter/Filter';
 
 
 type TaskItem = {
@@ -18,16 +21,24 @@ type PropsList = {
 const ListTask: React.FC<PropsList> = ({ list = [], onDelete,completed }) => {
     
   
-    
-    
+    const [search, setSearch] = useState<string>('')
+    const [ filter, setFilter] = useState<string>('')
+    const [ sort, setSort] = useState<string>('')
     
 
 
     return (
         <C.Components>
-            <h4>Suas listas</h4>
+            <Search search={search} setSearch={setSearch}/>
+            
+            <Filter filter={filter} setFilter={setFilter} sort={sort} setSort={setSort} />
+            
 
-            {list.map(  (item)=> (
+            {list
+            .filter( (item)=> { return filter === 'all' ? true: filter === 'completed' ? item.isCompleted : !item.isCompleted })
+            .filter( (item) =>( item.text.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ))
+            .sort( (a,b) => sort === 'asc' ? a.text.localeCompare(b.text) : b.text.localeCompare(a.text) )
+            .map( (item)=> (
                 <ul key={item.id}>
 
                 <li>

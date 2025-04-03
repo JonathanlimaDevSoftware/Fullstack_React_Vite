@@ -90,7 +90,7 @@ function App() {
     <section className='app'>
       <h1>Lista de Tarefa</h1>
 
-
+     
       <ListTask list={all} onDelete={removeItem} completed={completedItem}/>
   
       <FormAdd addItem={handleNewItem}/>
