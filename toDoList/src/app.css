@@ -1,0 +1,38 @@
+.app{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    padding: 0.9rem;
+}
+
+
+.btn{
+padding: 5px;
+font-weight: bold;
+border: 1px solid transparent;
+border-radius: 10px;
+cursor: pointer;
+}
+.btn:active{
+    transform: scale(1.1);
+    border: 1px solid white;
+    background-color: inherit;
+    color: white; 
+
+}
+
+.btn__trash{
+    background-color: brown;
+    color: white;
+}
+.btn__completed{
+    background-color: green;
+    color: white;
+}
+.btn__submit{
+    background-color: tomato;
+    color: white;
+}
+
+
+

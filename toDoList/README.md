@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# 📝 ToDoList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo de lista de tarefas simples e eficiente, desenvolvido com **React, TypeScript e Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Prévia do Projeto
 
-## Expanding the ESLint configuration
+![ToDoList Preview](./assets/todolist-preview.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> **Dica:** Substitua `./assets/todolist-preview.png` pelo caminho correto da imagem do seu projeto.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- ⚛️ React
+- 📜 TypeScript
+- 🎨 Tailwind CSS
+- 📝 Gerenciamento de tarefas
+
+---
+
+## 📦 Instalação e Uso
+
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```sh
+   cd SEU_REPOSITORIO
+   ```
+
+3. **Instale as dependências:**
+   ```sh
+   npm install
+   # ou
+   yarn install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```sh
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. **Acesse o projeto no navegador:**  
+   O projeto estará disponível em `http://localhost:5173/`.
+
+---
+
+## 🎯 Funcionalidades
+
+✅ Adicionar tarefas com categorias  
+✅ Marcar tarefas como concluídas  
+✅ Remover tarefas da lista  
+✅ Design responsivo  
+
+---
+
+## 🛠 Estrutura do Projeto
+```
+📂 todolist
+ ┣ 📂 src
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📜 ListTask.tsx
+ ┃ ┃ ┣ 📜 TaskItem.tsx
+ ┃ ┣ 📂 assets
+ ┃ ┣ 📜 App.tsx
+ ┃ ┣ 📜 main.tsx
+ ┃ ┣ 📜 index.css
+ ┣ 📜 package.json
+ ┣ 📜 README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📌 Melhorias Futuras
+- 🔄 Implementação de **armazenamento local** para salvar tarefas entre sessões
+- 📅 Adição de **data de vencimento** para cada tarefa
+- 📊 Estatísticas sobre as tarefas concluídas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a **MIT License** - sinta-se à vontade para utilizá-lo e modificá-lo! 😃
+
+Desenvolvido por **[Seu Nome](https://github.com/SEU_USUARIO)**. 🚀
+
