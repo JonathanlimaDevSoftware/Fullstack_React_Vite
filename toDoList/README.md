@@ -1,23 +1,28 @@
+Seu `README.md` está ótimo! Bem estruturado, claro e com informações completas. Mas aqui vão algumas sugestões para deixá-lo ainda mais profissional e com um toque mais polido:
+
+---
+
+### ✅ Versão revisada com pequenas melhorias de linguagem e formatação
+
+```markdown
 # 📝 ToDoList
 
-Um aplicativo de lista de tarefas simples e eficiente, desenvolvido com **React, TypeScript e Tailwind CSS**.
+Um aplicativo de lista de tarefas simples, eficiente e moderno, desenvolvido com **React, TypeScript e styled-components**.
 
 ---
 
 ## 📸 Prévia do Projeto
 
-![ToDoList Preview](./assets/todolist-preview.png)
-
-> **Dica:** Substitua `./assets/todolist-preview.png` pelo caminho correto da imagem do seu projeto.
+![ToDoList Preview](./src/assets/img/Screenshot%20from%202025-04-03%2011-39-49.png)
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- ⚛️ React
-- 📜 TypeScript
-- 🎨 Tailwind CSS
-- 📝 Gerenciamento de tarefas
+- ⚛️ React  
+- 📜 TypeScript  
+- 🎨 styled-components  
+- 📝 Lógica de gerenciamento de tarefas  
 
 ---
 
@@ -25,7 +30,7 @@ Um aplicativo de lista de tarefas simples e eficiente, desenvolvido com **React,
 
 1. **Clone o repositório:**
    ```sh
-   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+   git clone https://github.com/JonathanlimaDevSoftware/SEU_REPOSITORIO.git
    ```
 
 2. **Acesse a pasta do projeto:**
@@ -47,29 +52,35 @@ Um aplicativo de lista de tarefas simples e eficiente, desenvolvido com **React,
    yarn dev
    ```
 
-5. **Acesse o projeto no navegador:**  
+5. **Acesse no navegador:**  
    O projeto estará disponível em `http://localhost:5173/`.
 
 ---
 
 ## 🎯 Funcionalidades
 
-✅ Adicionar tarefas com categorias  
-✅ Marcar tarefas como concluídas  
-✅ Remover tarefas da lista  
-✅ Design responsivo  
+- ✅ Adição de tarefas com categorias  
+- ✅ Marcação de tarefas como concluídas  
+- ✅ Remoção de tarefas  
+- ✅ Filtro por categoria  
+- ✅ Busca por palavras-chave  
+- ✅ Design responsivo  
 
 ---
 
 ## 🛠 Estrutura do Projeto
+
 ```
 📂 todolist
  ┣ 📂 src
  ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 ListTask.tsx
- ┃ ┃ ┣ 📜 TaskItem.tsx
- ┃ ┣ 📂 assets
+ ┃ ┃ ┣ 📂 filter     ← Filtro por categoria
+ ┃ ┃ ┣ 📂 formAdd    ← Adição de novas tarefas
+ ┃ ┃ ┣ 📂 listTask   ← Listagem e controle das tarefas
+ ┃ ┃ ┣ 📂 search     ← Pesquisa por palavras-chave
+ ┃ ┣ 📂 assets       ← Imagens e recursos visuais
  ┃ ┣ 📜 App.tsx
+ ┃ ┣ 📜 App.css
  ┃ ┣ 📜 main.tsx
  ┃ ┣ 📜 index.css
  ┣ 📜 package.json
@@ -79,15 +90,18 @@ Um aplicativo de lista de tarefas simples e eficiente, desenvolvido com **React,
 ---
 
 ## 📌 Melhorias Futuras
-- 🔄 Implementação de **armazenamento local** para salvar tarefas entre sessões
-- 📅 Adição de **data de vencimento** para cada tarefa
-- 📊 Estatísticas sobre as tarefas concluídas
+
+- 🔄 **Armazenamento local** para manter as tarefas salvas entre sessões  
+- 📅 **Data de vencimento** para cada tarefa  
+- 📊 **Estatísticas** de tarefas concluídas  
 
 ---
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a **MIT License** - sinta-se à vontade para utilizá-lo e modificá-lo! 😃
+Este projeto está licenciado sob a **MIT License** – fique à vontade para usar e modificar! 😄
 
-Desenvolvido por **[Seu Nome](https://github.com/SEU_USUARIO)**. 🚀
+Desenvolvido com 💻 por [**Jonathan Lima**](https://github.com/JonathanlimaDevSoftware). 🚀
+```
 
+Se quiser, posso criar um badge de "tecnologias usadas", "licença", "status do projeto", entre outros pra colocar no topo do README. Quer?

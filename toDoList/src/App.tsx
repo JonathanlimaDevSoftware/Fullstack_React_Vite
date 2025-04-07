@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
 import  './app.css'
 import ListTask from './components/listTask/ListTask'
@@ -87,6 +87,8 @@ function App() {
 
 
   return (
+
+
     <section className='app'>
       <h1>Lista de Tarefa</h1>
 
