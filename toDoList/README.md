@@ -13,7 +13,7 @@ Um aplicativo de lista de tarefas simples, eficiente e moderno, desenvolvido com
 
 ## 📸 Prévia do Projeto
 
-![ToDoList Preview](./src/assets/img/Screenshot%20from%202025-04-03%2011-39-49.png)
+![ToDoList Preview](./src/assets/img/previa_projeto.png)
 
 ---
 
