@@ -35,7 +35,7 @@ Um aplicativo de lista de tarefas simples, eficiente e moderno, desenvolvido com
 
 2. **Acesse a pasta do projeto:**
    ```sh
-   cd SEU_REPOSITORIO
+   cd toDoList
    ```
 
 3. **Instale as dependências:**
