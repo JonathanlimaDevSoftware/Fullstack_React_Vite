@@ -20,11 +20,11 @@ Este projeto é um formulário desenvolvido utilizando **React**, **TypeScript**
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/JonathanlimaDevSoftware/Fullstack_React_Vite.git
    ```
 2. Acesse a pasta do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd form-react
    ```
 3. Instale as dependências:
    ```bash
@@ -46,7 +46,7 @@ Preencha os campos do formulário e clique no botão de envio. Caso algum campo 
 ## Exemplo de Código
 
 
-![Screenshot do Projeto](./src/assets/Screenshot_form.png)
+![Screenshot do Projeto](./src/assets/previa_form.png)
 
 
 ## Contribuição
