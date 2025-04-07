@@ -30,7 +30,7 @@ Um aplicativo de lista de tarefas simples, eficiente e moderno, desenvolvido com
 
 1. **Clone o repositório:**
    ```sh
-   git clone https://github.com/JonathanlimaDevSoftware/SEU_REPOSITORIO.git
+   git clone https://github.com/JonathanlimaDevSoftware/Fullstack_React_Vite.git
    ```
 
 2. **Acesse a pasta do projeto:**
